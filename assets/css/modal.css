@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.modal {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-container {
+    user-select: none;
+    position: absolute;
+    width: 70vw;
+    height: 80vh;
+    /* background: rgb(99, 99, 141); */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.modal__body-left {
+    display: flex;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    overflow: hidden;
+    align-items: center;
+    animation: show-view-left .2s .2s ease-in-out forwards;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__body-left img {
+    /* width: 100%; */
+}
+
+.modal__body-right {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    overflow: hidden;
+    align-items: center;
+    animation: show-view-right .2s .2s ease-in-out forwards;
+}
+
+.modal__body-right .info-product {
+    padding: 20px;
+}
+
+.modal__body-right .top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal__body-right .top .name{
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.modal__body-right .top .evaluate {
+    display: flex;
+    gap: 10px;
+}
+
+.modal__body-right .top .evaluate .text {
+    display: flex;
+    gap: 5px;
+}
+
+.modal__body-right .center {
+    transform: translateY(30px);
+    text-align: justify;
+}
+
+.modal__body-right .bottom {
+    transform: translateY(220px);
+}
+
+.modal__body-right .bottom .price {
+    display: flex;
+    letter-spacing: 1px;
+    gap: 5px;
+}
+
+.modal__body-right .bottom .add-cart {
+    color:white;
+    background: black;
+    text-align: center;
+    cursor: pointer;
+    padding-block:10px;
+    margin-top: 20px ;
+    font-weight: 700;
+    border: none;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}   
+
+@keyframes show-view-left {
+    0%{
+        left:50%;
+        transform: translateX(-50%);
+    }
+    100%{
+        left:0;
+        transform: translate(0);
+    }
+}
+
+@keyframes show-view-right {
+    0%{
+        left:50%;
+        transform: translateX(-50%);
+    }
+    100%{
+        left:50%;
+        transform: translate(0);
+    }
+}
+

@@ -1,0 +1,91 @@
+.container_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.container_login-body {
+    width: 35%;
+}
+
+.container_login-body-title {
+    text-transform: uppercase;
+    color: #666;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.container_login-body-signUp {
+    color: #666;
+    margin: 35px 0;
+}
+
+.body_formLogin-confirm a,
+.container_login-body-signUp a {
+    text-decoration: none;
+    color: rgb(150 202 226);
+}
+
+.body_formLogin-input {
+    position: relative;
+    margin: 30px 0;
+}
+
+.body_formLogin-input .error{
+    position: absolute;
+    color: red;
+    top: 110%;
+    left: 0;
+    font-size: 12px;
+}
+
+.body_formLogin-input .line{
+    position: absolute;
+    width: 0%;
+    background: red;
+    height: 2px;
+    bottom: 0;
+}
+
+.body_formLogin-input .line.active {
+    width: 100%;
+}
+
+.body_formLogin-input input {
+    border: none;
+    border-bottom: 1px solid #666;
+    width: 100%;
+    color: #666;
+    height: 35px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    outline: none;
+}
+
+.body_formLogin-remember {
+    margin: 35px 0;
+    font-weight: 300;
+}
+
+.body_formLogin-confirm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.body_formLogin-confirm input {
+    padding: 5px 40px;
+    border: none;
+    background: #333;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.body_formLogin-confirm input:hover {
+    background: #000;
+}
+
